@@ -15,7 +15,7 @@ URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad,REJECT-TINYGIF
 
 [URL Rewrite]
 ctier=[A-Z] citer=A 302
-^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) reject-200
+^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) _ reject-200
 
 [Script]
 http-request https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
