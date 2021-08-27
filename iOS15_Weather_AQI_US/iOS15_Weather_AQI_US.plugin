@@ -1,0 +1,5 @@
+[Script]
+http-response https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\? requires-body=1,script-path=https://github.com/yuhangrao/Loon_plugin/raw/master/iOS15_Weather_AQI_US/iOS15_Weather_AQI_US.js
+
+[MITM]
+hostname = weather-data.apple.com
