@@ -1,0 +1,20 @@
+[URL Rewrite]
+# 屏蔽京东收集信息
+https://wqs.jd.com/portal/wx/storageBridge2?\.shtml _ reject
+https://uranus.jd.com/log/m _ reject-dict
+https://m.jingxi.com/webmonitor/collect/biz.json _ reject-dict
+https://hermes.jd.com/log.gif _ reject-dict
+https://saturn.jd.com/log/sdk _ reject-dict
+https://api.m.jd.com/api\?functionId=pingou_rpds_custom _ reject-dict
+https://api.m.jd.com/api\?functionId=pingou_webmonitor_biz _ reject-dict
+https://sgm-m.jd.com/h5/custom _ reject-dict
+https://blackhole.m.jd.com/bypass _ reject-dict
+https://api.m.jd.com/client.action\?$ _ reject-dict
+https://ex.m.jd.com/exception_monitor/report _ reject-dict
+https://api.m.jd.com/client.action\?functionId=getIosDegrade _ reject-dict
+https://api.m.jd.com/client.action\?functionId=xview2Config _ reject-dict
+https://mars.jd.com/log/sdk _ reject-dict
+https:\/\/.+\.m\.jd.com\/m2 _ reject-dict
+https://lbsgw.m.jd.com/m _ reject-dict
+https://hawks.jd.com/log _ reject-dict
+https://perf.m.jd.com/app_monitor/v1/report _ reject-dict
