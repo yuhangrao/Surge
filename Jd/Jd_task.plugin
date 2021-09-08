@@ -50,7 +50,6 @@ cron "1 0 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.c
 cron "30 11 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/Wenmoux/scripts/master/jd/jd_superBrand.js,tag=京东特物ZX联想
 cron "1 0 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/panghu999/panghu/master/jd_ppdz.js,tag=京东柠檬东东泡泡大战
 cron "0 7 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/member_10.js,tag=京东一次性入会领豆10
-cron "20 9 * * *" script-path=https://cdn.jsdelivr.net/gh/age174/-@main/ximei.js,tag=西梅
 cron "15 9,20 * 5,6 *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/normal/adolf_newInteraction.js,tag=京东618大势新品赏
 cron "15 9,20 * 5,6 *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/normal/adolf_superbox.js,tag=京东超级盒子
 cron "0 9 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/jay_freshgoods.js,tag=京东抽盲盒一次性领豆
