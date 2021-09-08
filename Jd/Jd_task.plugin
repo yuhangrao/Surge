@@ -25,7 +25,6 @@ cron "15 0,6,13,19,21 * * *" script-path=https://raw.githubusercontent.com/hyzaw
 cron "30 10 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js,tag=京东试用
 cron "0 0 * * *" script-path=http://nm66.top/jd_tyt.js,tag=柠檬推一推
 cron "0 0 * * *" script-path=http://nm66.top/jd_chb.js,tag=柠檬拆红包
-cron "0 10 * * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/moposmall/Script/main/Me/jx_mc_coin.js,tag=京东京喜牧场刷金币
 cron "8 8 * 6 *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/zooPanda/zoo/dev/zooJx88hongbao.js,tag=京东京喜88红包动物园版
 cron "0 0 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/panghu999/ningmeng/main/mgtv.js,tag=柠檬芒果猎狼者撸汽水签到
 cron "0 * * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/moposmall/Script/main/Me/jx_mc.js,tag=京东京喜牧场
