@@ -15,6 +15,7 @@ http-request ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detai
 http-response ^https:\/\/account\.huami\.com\/v2\/client\/login requires-body=1,script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/xmSports.js
 
 #task
+cron "5 0 * * *" tag=京东多合一签到, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 cron "18 0-23/2 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_wealth_island.js,tag=财富大陆
 cron "15 0,6,13,19,21 * * *" script-path=https://raw.githubusercontent.com/hyzaw/scripts/main/ddo_pk.js,tag=京享值PK
 cron "15 6 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_DrawEntrance.js,tag=天天优惠大乐透
