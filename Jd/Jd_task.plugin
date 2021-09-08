@@ -83,9 +83,6 @@ cron "5-45/20 * * * *" script-path=https://raw.githubusercontent.com/shufflewzc/
 cron "10 0-23/4 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_health.js,tag=京东健康社区0301版
 cron "*/30 * * * *" script-path=https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/iboxpay.js,tag=笑谱ziye版
 cron "*/30 * * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jxcollect.js,tag=京东京喜工厂收电力（需单抓ck）
-cron "10 */1 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/youth.js,tag=sunert中青签到&转盘宝箱&时长
-cron "10 */2 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/Youth_Read.js,tag=sunert中青自动阅读
-cron "30 6 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js,tag=ztxtop中青看看赚&浏览赚
 cron "0 7 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/sngxpro/QuanX/master/scripts/ygkc.js,tag=阳光矿场
 cron "0 0 0 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_xtg.js,tag=京东手机尚学季
 cron "10 1,12 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_crazy_joy_coin.js,tag=京东crazyJoy挂机（手机慎用）
