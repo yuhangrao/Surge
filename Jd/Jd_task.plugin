@@ -154,4 +154,4 @@ cron "11 1 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.
 cron "11 0 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js,tag=京东排行榜
 
 [MITM]
-hostname = draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, me-api.jd.com
+hostname = draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, me-api.jd.com, m.jingxi.com
