@@ -4,16 +4,6 @@
 http-request https:\/\/me-api\.jd\.com\/user_new\/info\/GetJDUserInfoUnion script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/JD_extra_cookie.js
 http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, requires-body=1, tag=获取京东Cookie
 
-# 宠汪汪强制为别人助力
-http-request ^https:\/\/draw\.jdfcloud\.com\/\/common\/pet\/enterRoom\/h5\?invitePin=.*(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?&reqSource=weapp|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_help.js
-
-# 宠汪汪赛跑
-http-response ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code= requires-body=1,script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_run.js
-http-request ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId= script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_run.js
-
-# 小米运动
-http-response ^https:\/\/account\.huami\.com\/v2\/client\/login requires-body=1,script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/xmSports.js
-
 #task
 cron "5 0 * * *" tag=京东多合一签到, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 cron "18 0-23/2 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_wealth_island.js,tag=财富大陆
@@ -23,8 +13,6 @@ cron "1 8,12,18 * * *" script-path=https://ghproxy.com/https://raw.githubusercon
 cron "20 12,14 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/panghu999/panghu/master/jd_hwsx.js,tag=京东好物上新
 cron "0 11 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/panghu999/panghu/master/jd_lsj.js,tag=京东零食街
 cron "10 0,20 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/photonmang/quantumultX/master/JDscripts/jd_necklace.js,tag=京东点点券photonmang修复版
-cron "0 0-16/8 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/photonmang/quantumultX/master/JDscripts/jd_joy_reward.js,tag=京东宠汪汪兑换photonmang修复版
-cron "15 0-23/2 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/photonmang/quantumultX/master/JDscripts/jd_joy.js,tag=京东宠汪汪photonmang修复版
 cron "8 8 12 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/ziye888/JavaScript/main/Task/jddsh.js,tag=京东待收货
 cron "0 6 * * *" script-path=https://raw.githubusercontent.com/qqsdff/script/main/jd/jd_necklace.js,tag=京东点点券史蒂夫修复版
 cron "0 6 * * *" script-path=https://raw.githubusercontent.com/star261/jd/main/scripts/star_dreamFactory_tuan.js,tag=京东京喜工厂开团
@@ -107,11 +95,6 @@ cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/f
 cron "0 9,12,20,21 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_global_mh.js,tag=京东国际盲盒
 cron "10 * * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_jdfactory.js,tag=东东工厂
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_jdzz.js,tag=京东赚赚
-cron "15 0-23/2 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy.js,tag=京东宠汪汪
-cron "15 0-23/1 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_feedPets.js,tag=京东宠汪汪喂食
-cron "0 0-16/8 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_reward.js,tag=京东宠汪汪积分兑换奖品
-cron "15 10 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_run.js,tag=京东宠汪汪邀请助力与赛跑助力
-cron "10 0-21/3 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_steal.js,tag=京东宠汪汪偷好友积分与狗粮
 cron "0 9,12,18 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_jxnc.js,tag=京东京喜农场
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_kd.js,tag=京东快递签到
 cron "3 0-23/2 * * *" script-path=https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_moneyTree.js,tag=京东摇钱树
