@@ -17,7 +17,7 @@ USER-AGENT,tiktok*
 (?<=&mcc_mnc=)4 2 307
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
-#这个去水印的表达式和支付助手同时启用会导致知乎评论区无法加载，已注释
+#这个去水印的表达式和知乎助手同时启用会导致知乎评论区无法加载，已注释
 #[Script]
 #http-response ^https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://github.com/yuhangrao/Loon_plugin/raw/master/TikTok/dewatermark.js, requires-body=true, timeout=10, tag=TikTok去水印
 
