@@ -1,24 +1,11 @@
-[Rule]
-DOMAIN-SUFFIX,byteoversea.com
-DOMAIN-SUFFIX,ibytedtos.com
-DOMAIN-SUFFIX,ipstatp.com
-DOMAIN-SUFFIX,muscdn.com
-DOMAIN-SUFFIX,musical.ly
-DOMAIN-SUFFIX,tik-tokapi.com
-DOMAIN-SUFFIX,tiktok.com
-DOMAIN-SUFFIX,tiktokcdn.com
-DOMAIN-SUFFIX,tiktokv.com
-DOMAIN-KEYWORD,-tiktokcdn-com
-USER-AGENT,tiktok*
-
 [URL Rewrite]
-# (?<=_region=)CN(?=&) US 307
-# (^h.+v5\/)(.+) $1 302
-# (?<=&mcc_mnc=)4 2 307
-# (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
+(?<=_region=)CN(?=&) US 307
+(^h.+v5\/)(.+) $1 302
+(?<=&mcc_mnc=)4 2 307
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 [Script]
 http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-path=https://gitee.com/bp233/copywriting-assistant/raw/master/k8.js, requires-body=true, timeout=10, tag=TK去水印
 
 [MITM]
-hostname = *.tiktokv.com,*.byteoversea.com, *.tik-tokapi.com
+hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
