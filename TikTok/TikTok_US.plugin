@@ -11,9 +11,10 @@ DOMAIN-SUFFIX,tiktokv.com
 DOMAIN-KEYWORD,-tiktokcdn-com
 USER-AGENT,tiktok*
 
+第二条rewrite会匹配知乎评论区导致知乎评论区无法加载，已注释
 [URL Rewrite]
 (?<=_region=)CN(?=&) US 307
-(^h.+v5\/)(.+) $1 302
+#(^h.+v5\/)(.+) $1 302
 (?<=&mcc_mnc=)4 2 307
 (?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
