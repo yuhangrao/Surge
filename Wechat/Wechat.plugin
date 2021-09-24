@@ -1,6 +1,6 @@
 [Script]
 # Wechat屏蔽链接快速跳转
-http-response ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi requires-body=1,script-path=https://raw.githubusercontent.com/HotKids/Rules/master/Script/weixin110.js
+http-response ^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi requires-body=1,script-path=https://github.com/yuhangrao/Loon_plugin/raw/master/Wechat/weixin110.js
 
 [MITM]
 hostname= weixin110.qq.com
