@@ -1,0 +1,35 @@
+[Rule]
+# > Apple API
+DOMAIN-SUFFIX,aaplimg.com, PROXY
+DOMAIN-SUFFIX,apple.co, PROXY
+DOMAIN-SUFFIX,apple.com, PROXY
+DOMAIN-SUFFIX,apple.com.cn, DIRECT
+DOMAIN-SUFFIX,apple-cloudkit.com, PROXY
+DOMAIN-SUFFIX,apple-mapkit.com, PROXY
+DOMAIN-SUFFIX,appsto.re, PROXY
+DOMAIN-SUFFIX,appstore.com, PROXY
+DOMAIN-SUFFIX,cdn-apple.com, PROXY
+DOMAIN-SUFFIX,icloud.com, PROXY
+DOMAIN-SUFFIX,icloud.com.cn, DIRECT
+DOMAIN-SUFFIX,icloud-content.com, PROXY
+DOMAIN-SUFFIX,itunes.com, PROXY
+DOMAIN-SUFFIX,me.com, PROXY
+DOMAIN-SUFFIX,mzstatic.com, PROXY
+DOMAIN-KEYWORD,apple.com.akadns.net, PROXY
+DOMAIN-KEYWORD,icloud.com.akadns.net, PROXY
+IP-CIDR,17.0.0.0/8,no-resolve, PROXY
+IP-CIDR,63.92.224.0/19,no-resolve, PROXY
+IP-CIDR,65.199.22.0/23,no-resolve, PROXY
+IP-CIDR,139.178.128.0/18,no-resolve, PROXY
+IP-CIDR,144.178.0.0/19,no-resolve, PROXY
+IP-CIDR,144.178.36.0/22,no-resolve, PROXY
+IP-CIDR,144.178.48.0/20,no-resolve, PROXY
+IP-CIDR,192.35.50.0/24,no-resolve, PROXY
+IP-CIDR,198.183.17.0/24,no-resolve, PROXY
+IP-CIDR,205.180.175.0/24,no-resolve, PROXY
+
+# > Apple News
+DOMAIN-SUFFIX,apple.news, PROXY
+
+# > Apple Maps
+PROCESS-NAME,com.apple.geod, PROXY
