@@ -268,7 +268,6 @@ function testNf(filmId) {
             if (region == 'title') {
                 region = 'us'
               }
-            }
             console.log("nf:"+region)
             result["Netflix"] = "<b>Netflix: </b>完整支持"+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧ 🎉"
             //$notify("nf:"+result["Netflix"])
