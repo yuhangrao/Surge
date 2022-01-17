@@ -10,7 +10,7 @@ Thanks to & modified from
 
 [script]
 
-generic script-path= https://github.com/yuhangrao/Loon_plugin/raw/master/Streaming_media/check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true
+generic script-path= https://github.com/yuhangrao/Loon_plugin/raw/master/Streaming_media/check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system
 
 **/
 
@@ -263,11 +263,9 @@ function testNf(filmId) {
             return
         } else if (response.status === 200) {
             let url = response.headers["XOriginatingURL"]
-            //let region = 'us'
-            if (url != undefined) {
-              region = url.split('/')[3]
-              region = region.split('-')[0]
-              if (region == 'title') {
+            let region = url.split('/')[3]
+            region = region.split('-')[0]
+            if (region == 'title') {
                 region = 'us'
               }
             }
