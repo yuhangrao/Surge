@@ -63,28 +63,25 @@ let result = {
 // };
 
 ;(async () => {
-  //testYTB()
-  //testDazn()
-  //testParam()
   let [{ region, status }] = await Promise.all([testDisneyPlus(),testNf(FILM_ID)])
   console.log(result["Netflix"])
   console.log(`testDisneyPlus: region=${region}, status=${status}`)
   if (status==STATUS_COMING) {
     //console.log(1)
-    result["Disney"] = "<b>Disneyᐩ:</b> ⚠️ 即将登陆 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧"
+    result["Disney+"] = "<b>Disney+:</b> ⚠️ 即将登陆 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧"
   } else if (status==STATUS_AVAILABLE){
     //console.log(2)
-    result["Disney"] = "<b>Disneyᐩ:</b> 支持 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧ 🎉"
-    console.log(result["Disney"])
+    result["Disney+"] = "<b>Disney+:</b> 支持 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧ 🎉"
+    console.log(result["Disney+"])
   } else if (status==STATUS_NOT_AVAILABLE) {
     //console.log(3)
-    result["Disney"] = "<b>Disneyᐩ:</b> 未支持 🚫 "
+    result["Disney+"] = "<b>Disney+:</b> 未支持 🚫 "
   } else if (status==STATUS_TIMEOUT) {
-    result["Disney"] = "<b>Disneyᐩ:</b> 检测超时 🚦 "
+    result["Disney+"] = "<b>Disney+:</b> 检测超时 🚦 "
   }
 
-  let content = "--------------------------------------</br>"+([result["Disney"],result["Netflix"]]).join("</br></br>")
-  content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➟ " + nodeName+ "</font>"
+  let content = "------------------------------------</br>"+([result["Disney+"],result["Netflix"]]).join("</br></br>")
+  content = content + "</br>------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➟ " + nodeName+ "</font>"
   content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
     // $notify(typeof(output),output)
   // console.log("done---------------------");
@@ -266,7 +263,7 @@ function testNf(filmId) {
             return
         } else if (response.status === 200) {
             let url = response.headers["XOriginatingURL"]
-            let region = 'us'
+            //let region = 'us'
             if (url != undefined) {
               region = url.split('/')[3]
               region = region.split('-')[0]
