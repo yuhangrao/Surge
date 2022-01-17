@@ -5,14 +5,12 @@ Thanks to & modified from
 2. https://github.com/AtlantisGawrGura/Quantumult-X-Scripts/blob/main/media.js
 3. https://github.com/CoiaPrant/MediaUnlock_Test/blob/main/check.sh
 4. https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js
+5. https://github.com/Tartarus2014/Script/blob/master/stream-ui-check.js
 
-For Loon 344+ ONLY!!
 
 [script]
 
-generic script-path= https://raw.githubusercontent.com/Tartarus2014/Script/master/stream-ui-check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true
-
-@XIAO_KOP
+generic script-path= https://github.com/yuhangrao/Loon_plugin/raw/master/Streaming_media/check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true
 
 **/
 
