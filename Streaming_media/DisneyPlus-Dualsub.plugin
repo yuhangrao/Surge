@@ -1,5 +1,0 @@
-[Script]
-http-response https:\/\/.+media.dssott.com\/ps01\/disney\/.+(\.vtt|-all-.+\.m3u8.*) requires-body=1,max-size=307200,script-path=https://github.com/Neurogram-R/Surge/raw/master/DisneyPlus-Dualsub.js
-
-[MITM]
-hostname = *.media.dssott.com
