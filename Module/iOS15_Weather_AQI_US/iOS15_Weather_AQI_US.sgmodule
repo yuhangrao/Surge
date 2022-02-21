@@ -1,0 +1,8 @@
+#!name=Weather_AQI_US
+#!desc=修改iOS15的空气质量为美标AQI
+
+[Script]
+Weather_AQI_US = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\? requires-body=true,script-path=https://github.com/yuhangrao/Surge/raw/master/Module/iOS15_Weather_AQI_US/iOS15_Weather_AQI_US.js
+
+[MITM]
+hostname = %APPEND% weather-data.apple.com
