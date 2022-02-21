@@ -1,6 +1,0 @@
-[Script]
-# Redirect Geo Services to US
-http-response ^https?:\/\/gspe\d*-ssl\.ls\.apple\.com(\/pep\/gcc) script-path=https://gist.githubusercontent.com/VirgilClyne/ba3358bdd471da5e29d8a2cc9fcd88df/raw/36f0d4d4145a188f2229d090db30fabd84473073/Geo_Services.js, requires-body=true, timeout=10, tag=Geo_Services
-
-[MITM]
-hostname = gspe1-ssl.ls.apple.com, *.ls.apple.com, *.is.autonavi.com
