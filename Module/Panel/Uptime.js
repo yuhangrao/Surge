@@ -36,7 +36,7 @@ if(days==0){
 	if(minutes==0)return(`00:00:${seconds}`);
 	return(`00:${minutes}:${seconds}`)
 	}
-	return(`${hours}:${minutes}:${seconds}:`)
+	return(`${hours}:${minutes}:${seconds}`)
 	}else {
   hours=hours+days*24;
 	return(`${hours}:${minutes}:${seconds}`)
