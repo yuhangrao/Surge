@@ -30,7 +30,7 @@ const BASE_URL = 'https://www.netflix.com/title/'
 const FILM_ID = 81215567
 const AREA_TEST_FILM_ID = 80018499
 const DEFAULT_OPTIONS = {
-  title: 'Netflix unlock detection',
+  title: 'Netflix Unlock Detection',
   fullContent: 'Full support Netflix\nRegion: #REGION_FLAG# #REGION_NAME_EN#',
   fullIcon: '',
   fullIconColor: '',
