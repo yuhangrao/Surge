@@ -15,7 +15,7 @@ $httpClient.get(url, function(error, response, data){
     let isp = jsonData.isp
   body = {
     title: "Node Info",
-    content: `IP: ${ip}\nISP: ${isp}\nLocation: ${emoji}${country} - ${city}`,
+    content: `IP: ${ip}\nISP: ${isp}\nLocation: ${emoji} ${country} - ${city}`,
     icon: "personalhotspot.circle.fill"
   }
   $done(body);
