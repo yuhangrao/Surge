@@ -16,7 +16,7 @@ $httpClient.get(url, function(error, response, data){
   body = {
     title: "Node Info",
     content: `IP: ${ip}\nISP: ${isp}\nLocation: ${emoji}${country} - ${city}`,
-    icon: "globe.asia.australia.fill"
+    icon: "personalhotspot.circle.fill"
   }
   $done(body);
 });
