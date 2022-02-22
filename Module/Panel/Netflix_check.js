@@ -39,7 +39,7 @@ const DEFAULT_OPTIONS = {
   onlyOriginalIcon: '',
   onlyOriginalIconColor: '',
   onlyOriginalStyle: 'info',
-  notAvailableContent: 'Not support Netflix',
+  notAvailableContent: 'Do not support Netflix',
   notAvailableIcon: '',
   notAvailableIconColor: '',
   notAvailableStyle: 'alert',
