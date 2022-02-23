@@ -2,6 +2,7 @@
  * Surge 网络信息面板
  * @author: yuhang rao
  * Thanks: Peng-YM
+ * 请将 "api.my-ip.io" 添加至直连规则，否则会返回代理节点ip
  */
 const $ = API("NetInfoPanel", true);
 const $http = HTTP();
