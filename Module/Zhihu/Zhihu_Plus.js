@@ -17,47 +17,47 @@ let magicJS = MagicJS(scriptName, "INFO");
         response = modifyAnswer();
         break;
       // 处理登录用户信息
-      case /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/people\/self/.test(magicJS.request.url):
+      case /^https:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/people\/self/.test(magicJS.request.url):
         response = processUserInfo();
         break;
       // 黑名单增强 - 浏览黑名单用户信息时自动加入脚本黑名单
-      case magicJS.read("zhihu_settings_blocked_users") != false && /^https?:\/\/api\.zhihu\.com\/people\/((?!self).)*$/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_blocked_users") != false && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/people\/((?!self).)*$/.test(magicJS.request.url):
         response = autoInsertBlackList();
         break;
       // 推荐去广告与黑名单增强
-      case /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/topstory\/recommend\?/.test(magicJS.request.url):
+      case /^https:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/topstory\/recommend\?/.test(magicJS.request.url):
         response = removeRecommendAds();
         break;
       // 关注列表去广告
-      case /^https?:\/\/api\.zhihu\.com\/moments(\/|\?)?(recommend|action=|feed_type=)(?!\/people)/.test(magicJS.request.url):
+      case /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/moments(\/|\?)?(recommend|action=|feed_type=)(?!\/people)/.test(magicJS.request.url):
         response = removeMomentsAds();
         break;
       // 回答列表去广告与黑名单增强
-      case /^https?:\/\/api\.zhihu\.com\/v4\/questions/.test(magicJS.request.url):
+      case /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/v4\/questions/.test(magicJS.request.url):
         response = removeQuestionsAds();
         break;
       // 知乎V5版本评论去广告及黑名单增强
-      case /^https?:\/\/api\.zhihu\.com\/comment_v5\/(answers|pins|comments?|articles)\/\d+\/(root|child)_comment/.test(magicJS.request.url):
+      case /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/comment_v5\/(answers|pins|comments?|articles)\/\d+\/(root|child)_comment/.test(magicJS.request.url):
         response = removeCommentV5Ads();
         break;
       // 知乎旧版回答中的评论黑名单增强
-      case /^https?:\/\/api\.zhihu\.com\/(answers|pins|comments?|articles)\/\d+\/(root|child)_comments/.test(magicJS.request.url):
+      case /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/(answers|pins|comments?|articles)\/\d+\/(root|child)_comments/.test(magicJS.request.url):
         response = removeCommentAds();
         break;
       // 知乎热榜去广告
-      case magicJS.read("zhihu_settings_hot_list") != false && /^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/)/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_hot_list") != false && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/topstory\/hot-lists?(\?|\/)/.test(magicJS.request.url):
         response = removeHotListAds();
         break;
       // 拦截官方账号推广消息
-      case magicJS.read("zhihu_settings_sys_msg") != false && /^https?:\/\/api\.zhihu\.com\/notifications\/v3\/timeline\/entry\/system_message/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_sys_msg") != false && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/notifications\/v3\/timeline\/entry\/system_message/.test(magicJS.request.url):
         response = removeSysMsgAds();
         break;
       // 屏蔽官方营销消息
-      case magicJS.read("zhihu_settings_sys_msg") != false && /^https?:\/\/api\.zhihu\.com\/notifications\/v3\/message/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_sys_msg") != false && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/notifications\/v3\/message/.test(magicJS.request.url):
         response = removeMarketingMsg();
         break;
       // 去除预置关键字广告
-      case magicJS.read("zhihu_settings_preset_words") == true && /^https?:\/\/api\.zhihu\.com\/search\/preset_words\?/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_preset_words") == true && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/search\/preset_words\?/.test(magicJS.request.url):
         response = removeKeywordAds();
         break;
       // 优化知乎软件配置
@@ -65,11 +65,11 @@ let magicJS = MagicJS(scriptName, "INFO");
         response = modifyAppConfig();
         break;
       // 知乎热搜去广告
-      case magicJS.read("zhihu_settings_hot_search") == true && /^https?:\/\/api\.zhihu\.com\/search\/top_search\/tabs\/hot\/items/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_hot_search") == true && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/search\/top_search\/tabs\/hot\/items/.test(magicJS.request.url):
         response = removeHotSearchAds();
         break;
       // 黑名单管理
-      case magicJS.read("zhihu_settings_blocked_users") != false && /^https?:\/\/api\.zhihu\.com\/settings\/blocked_users/.test(magicJS.request.url):
+      case magicJS.read("zhihu_settings_blocked_users") != false && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/settings\/blocked_users/.test(magicJS.request.url):
         manageBlackUser();
         break;
       default:
@@ -77,7 +77,7 @@ let magicJS = MagicJS(scriptName, "INFO");
     }
   } else if (magicJS.isRequest) {
     // 知乎屏蔽关键词解锁
-    if (magicJS.read("zhihu_settings_blocked_keywords") != false && /^https?:\/\/api\.zhihu\.com\/feed-root\/block/.test(magicJS.request.url) === true) {
+    if (magicJS.read("zhihu_settings_blocked_keywords") != false && /^https?:\/\/(api\.zhihu\.com|(103\.41\.167\.(226|234|235|236)))\/feed-root\/block/.test(magicJS.request.url) === true) {
       response = unlockBlockedKeywords(response);
     }
   } else {
