@@ -29,13 +29,19 @@ let minutes=Math.floor(leave2/(60*1000))//计算相差分钟数
 //计算相差秒数
 let leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数
 let seconds=Math.round(leave3/1000)
-
-if(days==0){
-
-	if(hours==0){
-	if(minutes==0)return(`00:00:${seconds}`);
-	return(`00:${minutes}:${seconds}`)
+minutes=String(minutes);
+seconds=String(seconds);
+if(minutes.length===1) minutes="0"+minutes;
+if(seconds.length===1) seconds="0"+seconds;
+if(days===0){
+	if(hours===0){
+	    if(minutes==="00"){
+	        return(`00:00:${seconds}`)
+	    }
+	    return(`00:${minutes}:${seconds}`)
 	}
+	hours=String(hours);
+	if(hours.length===1) hours="0"+hours;
 	return(`${hours}:${minutes}:${seconds}`)
 	}else {
   hours=hours+days*24;
