@@ -112,6 +112,8 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
+  month = String(month);
+  day = String(day);
   if(month.length === 1) month = "0" + month;
   if(day.length === 1) day = "0" + day;
   return year + "-" + month + "-" + day;
