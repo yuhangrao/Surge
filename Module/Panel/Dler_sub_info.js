@@ -7,10 +7,10 @@
   let used = info.download + info.upload;
   let total = info.total - (info.download + info.upload);
   let expire = args.expire || info.expire;
-  let content = [`Used: ${bytesToSize(used)} / Available: ${bytesToSize(total)}`];
+  let content = [`Used: ${bytesToSize(used)}\nAvailable: ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(resetDayLeft === 1 ? `Reset: ${resetDayLeft} day remain` : `Reset: ${resetDayLeft} days remain`);
+    content.push(resetDayLeft === 1 ? `Reset: ${resetDayLeft} Day Remain` : `Reset: ${resetDayLeft} Days Remain`);
   }
   if (expire) {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
@@ -112,26 +112,7 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
+  if(month.length===1) month = "0" + month;
+  if(day.length===) day = "0" + day;
   return year + "-" + month + "-" + day;
-}
-
-Date.prototype.format = function(fmt) { 
-     var o = { 
-        "M+" : this.getMonth()+1,                 //月份 
-        "d+" : this.getDate(),                    //日 
-        "h+" : this.getHours(),                   //小时 
-        "m+" : this.getMinutes(),                 //分 
-        "s+" : this.getSeconds(),                 //秒 
-        "q+" : Math.floor((this.getMonth()+3)/3), //季度 
-        "S"  : this.getMilliseconds()             //毫秒 
-    }; 
-    if(/(y+)/.test(fmt)) {
-            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
-    }
-     for(var k in o) {
-        if(new RegExp("("+ k +")").test(fmt)){
-             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
-         }
-     }
-    return fmt; 
 }
