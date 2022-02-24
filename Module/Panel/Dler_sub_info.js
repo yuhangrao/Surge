@@ -14,7 +14,7 @@
   }
   if (expire) {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`Expire: ${(new Date(expire)).Format("yyyy-MM-dd")}`);
+    content.push(`Expire: ${formatTime(expire)}`);
   }
 
   let now = new Date();
