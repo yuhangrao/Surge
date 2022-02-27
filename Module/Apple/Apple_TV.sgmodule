@@ -1,5 +1,6 @@
 #!name= Enable Apple TV app
 #!desc=解锁TV app全功能：使用🇺🇸US「体育节目」和「儿童」页面，语言：英语(EN).
+#Thanks to: https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Apple_TV.sgmodule
 
 [Script]
 # Enable All TV app Tabs
