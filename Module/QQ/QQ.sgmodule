@@ -1,0 +1,8 @@
+#!name=QQ_屏蔽链接跳转
+#!desc=提供QQ屏蔽的链接自动跳转浏览器功能
+
+[Script]
+QQ = type=http-response,pattern=^https?:\/\/c\.pc\.qq\.com\/middlem\.html,requires-body=true,script-path=https://github.com/yuhangrao/Surge/raw/master/Module/QQ/QQ.js,timeout=2
+
+[MITM]
+hostname= %APPEND% c.pc.qq.com
