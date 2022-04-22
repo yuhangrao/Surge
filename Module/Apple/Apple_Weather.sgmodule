@@ -3,7 +3,7 @@
 
 [Script]
 Apple Weather Availability = type=http-response, pattern=^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/availability\/.*, requires-body=1, script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Apple/Apple_Weather_Availability.js
-Apple Weather = type=http-response, pattern=^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.*, requires-body=1, script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Apple/Apple_Weather.js
+Apple Weather = type=http-response, pattern=^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.*, requires-body=1, script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Apple/Apple_Wather.js
 Apple Weather Map = type=http-request, pattern=^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/.*(\?.*country=CN.*), requires-body=0, script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Apple/Apple_Weather_Map.js
 
 [MITM]
