@@ -5,7 +5,7 @@ Thanks to: https://github.com/VirgilClyne/iRingo
 const $ = new Env("Apple Weather Map v1.0.0");
 const URL = new URLSearch();
 const DataBase = {
-	"Weather":{"Switch":true,"NextHour":{"Switch":true},"AQI":{"Switch":true,"Mode":"WAQI Private","Location":"Station","Auth":"850a455c30d2305fa907efbbfb15bea99a3fa164","Scale":"EPA_NowCast.2201"},"Map":{"AQI":true}},
+	"Weather":{"Switch":true,"NextHour":{"Switch":true},"AQI":{"Switch":true,"Mode":"WAQI Private","Location":"Station","Auth":"850a455c30d2305fa907efbbfb15bea99a3fa164","Scale":"EPA_NowCast.2201"},"Map":{"AQI":false}},
 	"Siri":{"Switch":true,"CountryCode":"US","Domains":["web","itunes","app_store","movies","restaurants","maps"],"Functions":["flightutilities","lookup","mail","messages","news","safari","siri","spotlight","visualintelligence"],"Safari_Smart_History":true}
 };
 var { url, headers } = $request;
@@ -46,7 +46,7 @@ async function setENV(name, platform, database) {
 	Settings.Map.AQI = JSON.parse(Settings.Map.AQI) // BoxJs字符串转Boolean
 	$.log(`🎉 ${$.name}, Set Environment Variables`, `Settings: ${typeof Settings}`, `Settings内容: ${JSON.stringify(Settings)}`, "");
 	return Settings
-	async function getENV(t,e,n){let i=$.getjson(t,n),s=i?.[e]||i?.Settings?.[e]||n[e];if("undefined"!=typeof $argument){let t=Object.fromEntries($argument.split("&").map((t=>t.split("="))));Object.assign(s,t)}return s}
+	async function getENV(t,e,n){let i=$.getjson(t,n),r=i?.[e]||i?.Settings?.[e]||n[e];if("undefined"!=typeof $argument){if($argument){let t=Object.fromEntries($argument.split("&").map((t=>t.split("=")))),e={};for(var s in t)f(e,s,t[s]);Object.assign(r,e)}function f(t,e,n){e.split(".").reduce(((t,i,r)=>t[i]=e.split(".").length===++r?n:t[i]||{}),t)}}return r}
 };
 
 /**
