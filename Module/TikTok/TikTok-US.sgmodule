@@ -1,0 +1,19 @@
+#!name= TikTok-US
+#!desc= TikTok区域解锁(US)及去水印
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Surge/TikTok.list,TikTok
+
+#区域解锁
+[URL Rewrite]
+(?<=_region=)CN(?=&) US 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
+
+#去水印
+[Script]
+TikTok去水印 = type=http-response,pattern=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),script-path=https://github.com/yuhangrao/Surge/raw/master/Module/TikTok/Dewatermark.js, requires-body=true, timeout=10
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
