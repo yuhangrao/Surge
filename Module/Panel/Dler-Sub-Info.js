@@ -7,7 +7,7 @@
   let used = info.download + info.upload;
   let total = info.total - (info.download + info.upload);
   let expire = args.expire || info.expire;
-  let content = [`Used: ${bytesToSize(used)}\nAvailable: ${bytesToSize(total)}`];
+  let content = [`Usage: ${bytesToSize(used)}/${bytesToSize(total)}`];
 
   if (resetDayLeft) {
     content.push(resetDayLeft === 1 ? `Reset: ${resetDayLeft} Day Remain` : `Reset: ${resetDayLeft} Days Remain`);
