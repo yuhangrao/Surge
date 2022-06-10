@@ -9,9 +9,9 @@
   let expire = args.expire || info.expire;
   let content = [`Usage: ${bytesToSize(used)}/${bytesToSize(total)}`];
 
-  if (resetDayLeft) {
-    content.push(resetDayLeft === 1 ? `Reset: ${resetDayLeft} Day Remain` : `Reset: ${resetDayLeft} Days Remain`);
-  }
+//  if (resetDayLeft) {
+//    content.push(resetDayLeft === 1 ? `Reset: ${resetDayLeft} Day Remain` : `Reset: ${resetDayLeft} Days Remain`);
+//  }
   if (expire) {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`Expire: ${formatTime(expire)}`);
