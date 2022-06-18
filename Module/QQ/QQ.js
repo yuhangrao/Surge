@@ -1,8 +1,9 @@
 
 var str = ($response.body);
-
+console.log(str);
 str = str.match(/>https(\S*)</)
-str = str.substring(9,str.length-1)
+console.log(str);
+//str = str.substring(9,str.length-1)
 let opener = str.indexOf("m.tb.cn") != -1 ? "taobao://" + str: ($response.body)
 console.log(str);
 
