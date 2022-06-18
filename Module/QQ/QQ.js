@@ -1,9 +1,10 @@
 
 var str = ($response.body);
 
-str = str.match(/:&#x2f;&#x2f;(\S*)"}/)[1].replace(/&#x2f;/g, '/').replace(/&amp;/g, '&').split("\"")[0]
+str = str.match(/>https(\S*)</)
+str = str.substring(9,str.length-1)
 let opener = str.indexOf("m.tb.cn") != -1 ? "taobao://" + str: ($response.body)
-//console.log(str);
+console.log(str);
 
 const $ = new cmp()
 
