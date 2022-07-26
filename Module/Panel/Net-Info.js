@@ -26,7 +26,7 @@ const v4IP = v4.primaryAddress;
     const body = {
         title: wifi.ssid || "Cellular",
         content: `IP：${ip} \n`
-            + (wifi.ssid ? `Router：${router}\n` : ""),
+            + (wifi.ssid ? `Router：${router}` : ""),
         icon: wifi.ssid ? "wifi.circle.fill" : "antenna.radiowaves.left.and.right.circle.fill"
     };
     $.done(body);
