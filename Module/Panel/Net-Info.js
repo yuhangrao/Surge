@@ -23,14 +23,10 @@ const v4IP = v4.primaryAddress;
     const ip = v4IP;
     const router = wifi.ssid ? v4.primaryRouter : undefined;
 
-    const resp = await $http.get("https://api.my-ip.io/ip");
-    const externalIP = resp.body;
-
     const body = {
         title: wifi.ssid || "Cellular",
         content: `IP：${ip} \n`
-            + (wifi.ssid ? `Router：${router}\n` : "")
-            + `External IP：${externalIP}`,
+            + (wifi.ssid ? `Router：${router}\n` : ""),
         icon: wifi.ssid ? "wifi.circle.fill" : "antenna.radiowaves.left.and.right.circle.fill"
     };
     $.done(body);
