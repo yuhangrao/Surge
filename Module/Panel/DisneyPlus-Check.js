@@ -1,5 +1,5 @@
 /**
-Thanks to: https://github.com/Hyseen/Scripts
+ * Thanks to: https://gist.github.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3
  *
  * 支持使用脚本使用 argument 参数自定义配置，如：argument=key1=URLEncode(value1)&key2=URLEncode(value2)，具体参数如下所示，
  * title: 面板标题
