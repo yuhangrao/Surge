@@ -10,8 +10,8 @@ let startTime = timeTransform(dateNow,dateTime)
 if ($trigger == "button") await httpAPI("/v1/profiles/reload");
 
   $done({
-      title:"Surge Pro",
-      content:`Up time: ${startTime}`,
+      title:`Surge Pro Up time: ${startTime}`,
+      content:"",
 		icon: params.icon,
 		"icon-color":params.color
     });
