@@ -1,5 +1,5 @@
 #!name= iRingo for Apple Weather
-#!desc=(V4) 1.解锁全部天气数据类型 2.替换空气质量数据:WAQI 3.添加下一小时降水:气象在线
+#!desc=(V4) 1. Unlock the full function of Apple Weather 2. Replace Air Quality using data from WAQI 3. Unlock next hour precipitation using data from Weather Online
 
 [Header Rewrite]
 http-request ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.* header-del If-None-Match

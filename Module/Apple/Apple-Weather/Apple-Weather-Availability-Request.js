@@ -1,6 +1,6 @@
 /*
 Synced date: 2022.07.28
-commit: be5e661925e0dbcbf648e8da6fb255374654a7cf
+Commit: be5e661925e0dbcbf648e8da6fb255374654a7cf
 */
 
 const $ = new Env("Apple Weather Availability v1.0.0-request-beta");

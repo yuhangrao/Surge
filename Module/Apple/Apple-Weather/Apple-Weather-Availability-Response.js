@@ -1,9 +1,9 @@
 /*
-Synced date: 2022.07.28
-commit: 7900a2e72f3fce3000817925a5b4de5ca48e3ef9
+Synced date: 2022.08.07
+Commit: db9199f32e42bd4cab88346b07769825e66d4eb2
 */
 
-const $ = new Env("Apple Weather Availability v1.1.2-response-beta");
+const $ = new Env("Apple Weather Availability v1.1.3-response-beta");
 const URL = new URLs();
 const DataBase = {
 	"Location":{
@@ -109,7 +109,7 @@ async function setENV(name, platform, database) {
  * Empty object will be returned if type of path is invalid.
  */
 function getParams(path = "") {
-	const regExp = /^(?<ver>v1|v2|v3)\/availability\/(?<lat>-?\d+\.\d+)\/(?<lng>-?\d+\.\d+).*(?<countryCode>country=[A-Z]{2})?.*/i;
+	const regExp = /^(?<ver>v1|v2|v3)\/availability\/(?<lat>-?\d+\.\d+)\/(?<lng>-?\d+\.\d+).*/i;
 	return path?.match(regExp)?.groups;
 };
 
