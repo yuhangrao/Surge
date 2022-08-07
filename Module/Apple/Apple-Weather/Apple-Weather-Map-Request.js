@@ -1,9 +1,9 @@
 /*
-Synced date: 2022.07.28
-commit: 42dbf74e55c733c6c50718e1e4a5925008abbfa8
+Synced date: 2022.08.07
+Commit: 69e32f9027f63f0866f96e88aae4ac3c70b25cb9
 */
 
-const $ = new Env("Apple Weather Map v1.2.0-beta");
+const $ = new Env("Apple Weather Map v1.2.2-beta");
 const URL = new URLSearch();
 const DataBase = {
 	"Location":{
@@ -50,7 +50,8 @@ const DataBase = {
 				default:
 					break;
 			}
-			$request.headers.Host = url.host;
+			if ($request?.headers?.host) $request.headers.host = url.host;
+			else if ($request?.headers?.Host) $request.headers.Host = url.host;
 			$request.url = URL.stringify(url);
 		}
 	}
