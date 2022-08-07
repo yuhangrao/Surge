@@ -44,7 +44,8 @@ if(url.includes("Dynamic/DynAll") && method === postMethod){
 
     if(!dynAllReplyMessage.hasOwnProperty('upList') || dynAllReplyMessage.upList === null){
         console.log('upList为空');
-        }
+    } else {
+        
     }
 
     if(!dynAllReplyMessage.dynamicList.hasOwnProperty('list') || dynAllReplyMessage.dynamicList.list === null || dynAllReplyMessage.dynamicList.list.length === 0){
