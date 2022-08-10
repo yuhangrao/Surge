@@ -1,5 +1,5 @@
-#!name=Weibo-Ad
-#!desc=Remove ads in Weibo app.
+#!name=Weibo
+#!desc=Remove ads & useless contents in Weibo app.
 #!system=ios
 
 [Rule]
