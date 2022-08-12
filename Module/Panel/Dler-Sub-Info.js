@@ -24,7 +24,7 @@
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title}`,
+    title: `${args.title} hour:minutes`,
     content: content.join("\n"),
     icon: "cloud",
 //    "icon-color": args.color || "#007aff",
