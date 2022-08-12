@@ -22,9 +22,10 @@
   let minutes = now.getMinutes();
   hour = hour > 9 ? hour : "0" + hour;
   minutes = minutes > 9 ? minutes : "0" + minutes;
+  args.title += " "+hour+":"+minutes;
 
   $done({
-    title: `${args.title} hour:minutes`,
+    title: `${args.title}`,
     content: content.join("\n"),
     icon: "cloud",
 //    "icon-color": args.color || "#007aff",
