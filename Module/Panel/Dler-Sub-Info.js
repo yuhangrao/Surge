@@ -22,6 +22,7 @@
   let minutes = now.getMinutes();
   hour = hour > 9 ? hour : "0" + hour;
   minutes = minutes > 9 ? minutes : "0" + minutes;
+  args.title += " "+hour+":"+minutes;
 
   $done({
     title: `${args.title}`,
