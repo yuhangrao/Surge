@@ -1,8 +1,11 @@
-#!name=WeChat-屏蔽链接跳转
-#!desc=对WeChat屏蔽的链接自动跳转浏览器
+#!name=WeChat
+#!desc=1. Auto open the link which blocked by WeChat in Safari 2. Remove ads in WeChat Official Accounts.
 
 [Script]
 WeChat110 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=true,script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Wechat/WeChat110.js,timeout=2
 
+WeChat-Official-Accounts = script-path=https://hub.qste.com/Script/WeChat/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
+
+
 [MITM]
-hostname= %APPEND% weixin110.qq.com
+hostname= %APPEND% weixin110.qq.com, mp.weixin.qq.com
