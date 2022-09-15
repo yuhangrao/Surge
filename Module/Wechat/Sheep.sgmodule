@@ -1,0 +1,8 @@
+#!name=羊了个羊重写脚本
+#!desc=修改羊了个羊第二关
+
+[Script]
+Sheep = type=http-response,pattern=^https?:\/\/cat\-match\.easygame2021\.com\/sheep\/v1\/game\/map\_info(.*),requires-body=true,script-path=https://raw.githubusercontent.com/yangdaozhao/ylgy/master/ylgy.js,timeout=2
+
+[MITM]
+hostname= %APPEND% *.easygame2021.com
