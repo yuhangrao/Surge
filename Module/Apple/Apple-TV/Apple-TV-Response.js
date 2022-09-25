@@ -1,9 +1,9 @@
 /*
-Synced date: 2022.06.18
-commit: 1d3ec95a1cfe6ca05473e7b6c20b20db4e097dec
+Synced date: 2022.09.25
+commit: 20eca4c799c6272e017a056491f2346f3ed24bf0
 */
 
-const $ = new Env("Apple TV v2.0.5-response");
+const $ = new Env("Apple TV v2.0.7-response");
 const URL = new URLs();
 const DataBase = {
 	"Location":{
@@ -34,6 +34,12 @@ const DataBase = {
 	}
 };
 
+// headers转小写
+for (const [key, value] of Object.entries($request.headers)) {
+	delete $request.headers[key]
+	$request.headers[key.toLowerCase()] = value
+};
+
 /***************** Async *****************/
 !(async () => {
 	const { Settings, Caches, Configs } = await setENV("iRingo", "TV", DataBase);
@@ -43,7 +49,7 @@ const DataBase = {
 		switch (url.path) {
 			case "uts/v3/configurations":
 				if (url.params.caller !== "wta") { // 不修改caller=wta的configurations数据
-					const locale = $request?.headers?.["X-Apple-I-Locale"]?.split('_')?.[0] ?? "zh"
+					const locale = $request?.headers?.["x-apple-i-locale"]?.split('_')?.[0] ?? "zh"
 					$.log(`locale: ${locale}`, "");
 					let { tabs, tabsSplitScreen } = await createTabsGroup(url.params, locale, Configs);
 					const AllTabs = ["WatchNow", "Originals", "Movies", "TV", "Sports", "Kids", "Library", "Search"];
