@@ -2,6 +2,14 @@
 #!desc=对Apple相关服务进行策略组分流
 
 [Rule]
+# > Apple Maps
+PROCESS-NAME,com.apple.geod,Apple
+DOMAIN,direction2.is.autonavi.com,DIRECT
+DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
+DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT
+DOMAIN,dispatcher.is.autonavi.com,DIRECT
+DOMAIN,limit-rule.is.autonavi.com,DIRECT
+
 # > Apple API
 DOMAIN-SUFFIX,aaplimg.com,Apple
 DOMAIN-SUFFIX,apple.co,Apple
@@ -33,11 +41,3 @@ IP-CIDR,205.180.175.0/24,Apple,no-resolve
 
 # > Apple News
 DOMAIN-SUFFIX,apple.news,Apple
-
-# > Apple Maps
-PROCESS-NAME,com.apple.geod,Apple
-DOMAIN,direction2.is.autonavi.com,DIRECT
-DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
-DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT
-DOMAIN,dispatcher.is.autonavi.com,DIRECT
-DOMAIN,limit-rule.is.autonavi.com,DIRECT
