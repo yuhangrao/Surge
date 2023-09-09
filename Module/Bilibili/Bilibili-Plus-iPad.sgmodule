@@ -33,7 +33,7 @@ BiliBili_我的页面处理 = type=http-response,pattern=^https?:\/\/app\.bilibi
 
 bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js, requires-body=true, timeout=10
 
-bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Bilibili/Bilibili-Proto-iPad.js, requires-body=true, binary-body-mode=true, timeout=10
+bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(viewunite\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js, requires-body=true, binary-body-mode=true, timeout=10
 
 #解锁大会员画质
 BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
