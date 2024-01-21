@@ -1,5 +1,7 @@
-var obj = JSON.parse($response.body);
-obj.advertisement_num = 0;
-obj.advertisement_info = [];
-delete obj.appid;
-$done({body: JSON.stringify(obj)}); 
+if ($response.body) {
+    let body = {"advertisement_num":0,"advertisement_info":[]};
+    $done({body: JSON.stringify(body)});
+}
+else{
+    $done({});
+}
