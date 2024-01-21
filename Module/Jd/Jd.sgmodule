@@ -1,5 +1,6 @@
 #!name=Jd-屏蔽信息收集
 #!desc=屏蔽京东收集隐私信息
+#!category=Ad
 
 [URL Rewrite]
 # 屏蔽京东收集信息

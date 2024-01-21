@@ -1,5 +1,6 @@
 #!name= iRingo for Siri & Search
 #!desc=(V2) 全面自定义「Siri与搜索」的功能。
+#!category=Apple
 
 [Script]
 # Bag (iOS/macOS)

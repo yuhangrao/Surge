@@ -1,5 +1,6 @@
 #!name= iRingo for TV app
 #!desc=(V2) 全面自定义「TV app」功能
+#!category=Apple
 
 [Script]
 TV Request = type=http-request, pattern=^https?:\/\/uts-api\.itunes\.apple\.com\/uts\/(v1|v2|v3)\/.*, requires-body=1, script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Apple/Apple-TV/Apple-TV-Request.js

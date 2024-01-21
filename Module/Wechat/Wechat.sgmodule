@@ -1,5 +1,6 @@
 #!name=WeChat
 #!desc=1. Auto open the link which blocked by WeChat in Safari 2. Remove ads in WeChat Official Accounts.
+#!category=Ad
 
 [Script]
 WeChat110 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=true,script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Wechat/WeChat110.js,timeout=2

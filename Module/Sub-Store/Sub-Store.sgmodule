@@ -1,5 +1,6 @@
 #!name=Sub-Store
-#!desc=Advanced subscription manager. 
+#!desc=Advanced subscription manager.
+#!category=Enhancement
 
 [Script]
 Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120,ability=http-client-policy

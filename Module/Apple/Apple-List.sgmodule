@@ -1,5 +1,6 @@
 #!name= Apple 分流
 #!desc=对Apple相关服务进行策略组分流
+#!category=Apple
 
 [Rule]
 # > Apple Maps

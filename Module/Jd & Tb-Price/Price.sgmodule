@@ -1,5 +1,6 @@
 #!name=京东&淘宝历史价格
 #!desc=提供京东和淘宝历史价格查询的支持
+#!category=Enhancement
 
 [Script]
 # jd
