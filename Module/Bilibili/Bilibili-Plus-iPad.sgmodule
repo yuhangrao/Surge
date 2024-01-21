@@ -1,5 +1,6 @@
 #!name=Bilibili-Plus-iPad
 #!desc=去除b站广告，对app页面进行精简，解锁大会员画质
+#!category=Enhancement
 
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT

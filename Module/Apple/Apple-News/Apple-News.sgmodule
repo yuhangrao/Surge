@@ -1,5 +1,6 @@
 #!name= iRingo for News
 #!desc=(V2) 1.自定义解锁News的地区 2.Coming Soon…
+#!category=Apple
 
 [Script]
 News = type=http-request, pattern=^https?:\/\/news-(edge|events)\.apple\.com\/(v1\/configs|analyticseventsv2\/async)(\?.*)?$, requires-body=1, script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Apple/Apple-News/Apple-News-Request.js

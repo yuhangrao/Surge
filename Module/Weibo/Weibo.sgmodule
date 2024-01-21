@@ -1,6 +1,6 @@
 #!name=Weibo
 #!desc=Remove ads & useless contents in Weibo app.
-#!system=ios
+#!category=Ad
 
 [Rule]
 # 微博其它
