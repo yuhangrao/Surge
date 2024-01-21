@@ -4,7 +4,7 @@
 [Script]
 WeChat110 = type=http-response,pattern=^https?:\/\/weixin110\.qq\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi,requires-body=true,script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Wechat/WeChat110.js,timeout=2
 
-WeChat-Official-Accounts = script-path=https://hub.qste.com/Script/WeChat/WeChat.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
+WeChat-Official-Accounts = script-path=https://github.com/yuhangrao/Surge/raw/master/Module/Wechat/WeChat-Official-Accounts.js,type=http-request,pattern=^https://mp\.weixin\.qq\.com/mp/getappmsgad
 
 
 [MITM]
