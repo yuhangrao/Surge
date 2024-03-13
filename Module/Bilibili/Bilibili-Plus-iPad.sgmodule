@@ -37,7 +37,7 @@ BiliBili_我的页面处理 = type=http-response,pattern=^https?:\/\/app\.bilibi
 bili-proto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(viewunite\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js, requires-body=true, binary-body-mode=true, timeout=10
 
 #解锁大会员画质
-BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
+BiliBili_HD = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=true,script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Script/BiliHD.js
 
 #去除交互式弹幕
 bilibili.interaction= type=http-response,pattern=https:\/\/grpc\.biliapi\.net\/bilibili\.community\.service\.dm\.v1\.DM\/DmView,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/bilibili.helper.beta.js
