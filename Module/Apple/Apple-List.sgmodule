@@ -42,3 +42,4 @@ IP-CIDR,205.180.175.0/24,Apple,no-resolve
 
 # > Apple News
 DOMAIN-SUFFIX,apple.news,Apple
+DOMAIN-SUFFIX,iadsdk.apple.com,Reject
