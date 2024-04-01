@@ -1,0 +1,11 @@
+#!name= WeChat Coin
+#!desc= Collect coin automatically
+#!category= Enhancement
+
+[MITM]
+hostname = payapp.weixin.qq.com
+
+[Script]
+Coin = type=http-response,pattern=https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login,requires-body=1,max-size=0,binary-body-mode=0,timeout=30,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,script-update-interval=0
+
+Coin-cron = type=cron,cronexp=30 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js,script-update-interval=0
