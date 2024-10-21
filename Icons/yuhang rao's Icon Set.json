@@ -2,5 +2,7 @@
   "name": "yuhang rao's Icon Set",
   "icons": [
     {"Microsoft": "Microsoft", "url": "https://github.com/yuhangrao/Surge/raw/master/Icons/Microsoft-icon.png"},
+    {"Speedtest": "Speedtest", "url": "https://github.com/yuhangrao/Surge/raw/master/Icons/Speedtest-icon.png"},
+    {"Apple": "Apple", "url": "https://github.com/yuhangrao/Surge/raw/master/Icons/Apple-icon.png"},
   ]
 }
