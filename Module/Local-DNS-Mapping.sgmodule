@@ -2,6 +2,7 @@
 #!desc=为腾讯阿里等指定自家 dns 服务器
 #!category=Enhancement
 
+[Host]
 #Tencent
 *.qcloud.com = server:https://doh.pub/dns-query
 *.gtimg.cn = server:https://doh.pub/dns-query
