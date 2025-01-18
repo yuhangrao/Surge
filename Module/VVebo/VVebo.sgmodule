@@ -1,0 +1,12 @@
+#!name= VVebo
+#!desc= Fix the problem that VVebo can't see other users' timeline
+#!category= Enhancement
+
+[MITM]
+hostname = api.weibo.cn
+
+[Script]
+VVebo1 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count\?,script-path=https://github.com/yuhangrao/Surge/raw/refs/heads/master/Module/VVebo/VVebo-Timeline.js
+VVebo2 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\?,script-path=https://github.com/yuhangrao/Surge/raw/refs/heads/master/Module/VVebo/VVebo-Timeline.js
+VVebo3 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?,script-path=https://github.com/yuhangrao/Surge/raw/refs/heads/master/Module/VVebo/VVebo-Timeline.js,requires-body=true
+VVebo4 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/cardlist\?,script-path=https://github.com/yuhangrao/Surge/raw/refs/heads/master/Module/VVebo/VVebo-Fans.js,requires-body=true
