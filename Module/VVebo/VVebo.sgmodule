@@ -3,7 +3,7 @@
 #!category= Enhancement
 
 [MITM]
-hostname = api.weibo.cn
+hostname = %APPEND% api.weibo.cn
 
 [Script]
 #Fix timeline
