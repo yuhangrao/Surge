@@ -4,31 +4,31 @@
 
 [Rule]
 # > Apple Maps
-PROCESS-NAME,com.apple.geod,Apple
-DOMAIN,direction2.is.autonavi.com,DIRECT
-DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
-DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT
-DOMAIN,dispatcher.is.autonavi.com,DIRECT
-DOMAIN,limit-rule.is.autonavi.com,DIRECT
+PROCESS-NAME,com.apple.geod,Apple,extended-matching
+DOMAIN,direction2.is.autonavi.com,DIRECT,extended-matching
+DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT,extended-matching
+DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT,extended-matching
+DOMAIN,dispatcher.is.autonavi.com,DIRECT,extended-matching
+DOMAIN,limit-rule.is.autonavi.com,DIRECT,extended-matching
 
 # > Apple API
-DOMAIN-SUFFIX,aaplimg.com,Apple
-DOMAIN-SUFFIX,apple.co,Apple
-DOMAIN-SUFFIX,apple.com,Apple
-DOMAIN-SUFFIX,apple.com.cn,DIRECT
-DOMAIN-SUFFIX,apple-cloudkit.com,Apple
-DOMAIN-SUFFIX,apple-mapkit.com,Apple
-DOMAIN-SUFFIX,appsto.re,Apple
-DOMAIN-SUFFIX,appstore.com,Apple
-DOMAIN-SUFFIX,cdn-apple.com,Apple
-DOMAIN-SUFFIX,icloud.com,Apple
-DOMAIN-SUFFIX,icloud.com.cn,DIRECT
-DOMAIN-SUFFIX,icloud-content.com,Apple
-DOMAIN-SUFFIX,itunes.com,Apple
-DOMAIN-SUFFIX,me.com,Apple
-DOMAIN-SUFFIX,mzstatic.com,Apple
-DOMAIN-KEYWORD,apple.com.akadns.net,Apple
-DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
+DOMAIN-SUFFIX,aaplimg.com,Apple,extended-matching
+DOMAIN-SUFFIX,apple.co,Apple,extended-matching
+DOMAIN-SUFFIX,apple.com,Apple,extended-matching
+DOMAIN-SUFFIX,apple.com.cn,DIRECT,extended-matching
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple,extended-matching
+DOMAIN-SUFFIX,apple-mapkit.com,Apple,extended-matching
+DOMAIN-SUFFIX,appsto.re,Apple,extended-matching
+DOMAIN-SUFFIX,appstore.com,Apple,extended-matching
+DOMAIN-SUFFIX,cdn-apple.com,Apple,extended-matching
+DOMAIN-SUFFIX,icloud.com,Apple,extended-matching
+DOMAIN-SUFFIX,icloud.com.cn,DIRECT,extended-matching
+DOMAIN-SUFFIX,icloud-content.com,Apple,extended-matching
+DOMAIN-SUFFIX,itunes.com,Apple,extended-matching
+DOMAIN-SUFFIX,me.com,Apple,extended-matching
+DOMAIN-SUFFIX,mzstatic.com,Apple,extended-matching
+DOMAIN-KEYWORD,apple.com.akadns.net,Apple,extended-matching
+DOMAIN-KEYWORD,icloud.com.akadns.net,Apple,extended-matching
 IP-CIDR,17.0.0.0/8,Apple,no-resolve
 IP-CIDR,63.92.224.0/19,Apple,no-resolve
 IP-CIDR,65.199.22.0/23,Apple,no-resolve
@@ -41,5 +41,5 @@ IP-CIDR,198.183.17.0/24,Apple,no-resolve
 IP-CIDR,205.180.175.0/24,Apple,no-resolve
 
 # > Apple News
-DOMAIN-SUFFIX,apple.news,Apple
-DOMAIN-SUFFIX,iadsdk.apple.com,REJECT
+DOMAIN-SUFFIX,apple.news,Apple,extended-matching
+DOMAIN-SUFFIX,iadsdk.apple.com,REJECT,pre-matching,extended-matching
