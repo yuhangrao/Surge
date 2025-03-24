@@ -1,0 +1,26 @@
+#!name=Ruleset
+#!desc=Personal ruleset
+#!category=Enhancement
+
+[Rule]
+# 美团
+DOMAIN-SUFFIX,dreport.meituan.net,REJECT,pre-matching,extended-matching
+DOMAIN-SUFFIX,d.meituan.net,REJECT,pre-matching,extended-matching
+IP-CIDR,202.90.110.46/32,REJECT,pre-matching,no-resolve
+IP-CIDR,202.90.108.13/32,REJECT,pre-matching,no-resolve
+IP-CIDR,202.90.110.46/32,REJECT,pre-matching,no-resolve
+IP-CIDR,202.90.108.13/32,REJECT,pre-matching,no-resolve
+
+# Disney Ad
+DOMAIN-SUFFIX,disneyadvertising.com,REJECT,pre-matching,extended-matching
+
+# 终点站emby
+DOMAIN-SUFFIX,emby.wtf,Stream,extended-matching
+
+# QQ
+DOMAIN,wspeed.qq.com,REJECT,pre-matching,extended-matching
+IP-CIDR6,2409:8c1e:8f60::/48,DIRECT,no-resolve
+IP-CIDR6,2409:8c54:871::/48,DIRECT,no-resolve
+
+# Domain of IP info in Surge panel
+DOMAIN,api.my-ip.io,DIRECT,extended-matching
