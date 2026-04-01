@@ -1,0 +1,14 @@
+#!name= C. Anatomy
+#!desc= Enable professional features
+#!category= Enhancement
+
+[MITM]
+hostname = %APPEND% ca.3d4medical.com
+
+[Body Rewrite]
+http-response-jq ^https://ca\.3d4medical\.com/api/v13/users/init/ '.subscriptions = [{"bundle":"com.3D4Medical.CA.NewProLicense","expire":"2099-03-30T14:26:12+00:00","active":true,"id":7904047,"source":"organic","offer":"","status":0,"ext_id":"88a70a60-2d6b-45e7-af36-4e62fe280f43","in_billing_retry":false,"store":"official"}]'
+
+http-response-jq ^https://ca\.3d4medical\.com/api/v13/users/info/ '.subscriptions = [{"id":7904047,"bundle":"com.3D4Medical.CA.NewProLicense","expire":"2099-03-30T14:26:12+00:00","active":true,"store":"official","offer":"","in_billing_retry":false,"source":"organic","status":0,"ext_id":"88a70a60-2d6b-45e7-af36-4e62fe280f43"}] | .licenses = [{"bundle":"com.3D4Medical.CA.NewProLicense","expire":"2099-03-30T14:26:12+00:00","active":true,"store":"official","offer":"","in_billing_retry":false,"source":"organic"},{"bundle":"ca19.trial","expire":"2026-04-02T14:20:42.035612+00:00","active":true,"store":"manual","offer":"","in_billing_retry":false,"source":null}]'
+
+[Rule]
+DOMAIN,3d4medical.count.ly,REJECT
