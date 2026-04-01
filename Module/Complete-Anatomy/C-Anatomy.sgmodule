@@ -1,6 +1,7 @@
-#!name= C. Anatomy
-#!desc= Enable professional features
-#!category= Enhancement
+#!name = C. Anatomy
+#!desc = Enable professional features
+#!category = Enhancement
+#!tested_version = 12.1
 
 [MITM]
 hostname = %APPEND% ca.3d4medical.com
