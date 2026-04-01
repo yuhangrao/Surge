@@ -2,6 +2,7 @@
 #!desc = Enable professional features
 #!category = Enhancement
 #!tested_version = 12.1
+# Usage: Clean install the app and enable this module before the first sign in. 
 
 [MITM]
 hostname = %APPEND% ca.3d4medical.com
