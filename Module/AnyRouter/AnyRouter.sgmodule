@@ -1,8 +1,9 @@
 #!name=AnyRouter Thinking Adaptive
 #!desc=为 anyrouter.top 的 POST JSON 请求补全或修正 thinking.type=adaptive
+#!author=OpenAI
 
-[Body Rewrite]
-http-request-jq ^https?:\/\/([^\/]+\.)?anyrouter\.top\/ 'if type == "object" then {"thinking": (if (.thinking | type) == "object" then (.thinking + {"type":"adaptive"}) else {"type":"adaptive"} end)} + del(.thinking) else . end'
+[Script]
+anyrouter_thinking = type=http-request,pattern=^https?:\/\/([^\/]+\.)?anyrouter\.top\/,requires-body=true,max-size=262144,script-path=https://github.com/yuhangrao/Surge/raw/refs/heads/master/Module/AnyRouter/anyrouter-thinking.js
 
 [MITM]
 hostname = %APPEND% anyrouter.top, *.anyrouter.top
