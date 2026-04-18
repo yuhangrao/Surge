@@ -1,0 +1,8 @@
+#!name=AnyRouter Thinking Adaptive
+#!desc=为 anyrouter.top 的 POST JSON 请求补全或修正 thinking.type=adaptive
+
+[Body Rewrite]
+http-request-jq ^https?:\/\/([^\/]+\.)?anyrouter\.top\/ 'if type == "object" then {"thinking": (if (.thinking | type) == "object" then (.thinking + {"type":"adaptive"}) else {"type":"adaptive"} end)} + del(.thinking) else . end'
+
+[MITM]
+hostname = %APPEND% anyrouter.top, *.anyrouter.top
