@@ -1,9 +1,10 @@
-#!name=AnyRouter Thinking Adaptive
-#!desc=为 anyrouter.top 的 POST JSON 请求补全或修正 thinking.type=adaptive
-#!author=OpenAI
+#!name=AnyRouter
+#!desc=Proxy rules for AnyRouter API
+#!category=Utilities
 
-[Script]
-anyrouter_thinking = type=http-request,pattern=^https?:\/\/([^\/]+\.)?anyrouter\.top\/,requires-body=true,max-size=262144,script-path=https://github.com/yuhangrao/Surge/raw/refs/heads/master/Module/AnyRouter/anyrouter-thinking.js
+[Rule]
+# > US
+DOMAIN-SUFFIX,anyrouter.top,AnyRouter,extended-matching
 
-[MITM]
-hostname = %APPEND% anyrouter.top, *.anyrouter.top
+# > Shanghai
+DOMAIN-SUFFIX,a-ocnfniawgw.cn-shanghai.fcapp.run,DIRECT,extended-matching
