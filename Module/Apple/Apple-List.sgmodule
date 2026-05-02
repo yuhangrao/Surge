@@ -43,3 +43,16 @@ IP-CIDR,205.180.175.0/24,Apple,no-resolve
 # > Apple News
 DOMAIN-SUFFIX,apple.news,Apple,extended-matching
 DOMAIN-SUFFIX,iadsdk.apple.com,REJECT,pre-matching,extended-matching
+
+# > Apple Push
+DOMAIN,identity.apple.com,Apple,extended-matching
+DOMAIN-SUFFIX,push.apple.com,Apple,extended-matching
+IP-CIDR,17.188.128.0/18,Apple,no-resolve
+IP-CIDR,17.188.20.0/23,Apple,no-resolve
+IP-CIDR,17.249.0.0/16,Apple,no-resolve
+IP-CIDR,17.252.0.0/16,Apple,no-resolve
+IP-CIDR,17.57.144.0/22,Apple,no-resolve
+IP-CIDR,2403:300:a42::/48,Apple,no-resolve
+IP-CIDR,2403:300:a51::/48,Apple,no-resolve
+IP-CIDR,2620:149:a44::/48,Apple,no-resolve
+IP-CIDR,2a01:b740:a42::/48,Apple,no-resolve
