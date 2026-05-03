@@ -3,30 +3,107 @@
 #!category=Apple
 
 [Rule]
-# > Apple Maps
-PROCESS-NAME,com.apple.geod,Apple,extended-matching
+# > Apple CN
+DOMAIN,api.smoot.apple.cn,DIRECT,extended-matching
+DOMAIN,appleintelligencefeedback.care.apple.com,DIRECT,extended-matching
+DOMAIN,gs-loc-cn.apple.com,DIRECT,extended-matching
+DOMAIN-SUFFIX,apple.com.cn,DIRECT,extended-matching
+DOMAIN-SUFFIX,cn.apple.com,DIRECT,extended-matching
+DOMAIN-SUFFIX,cn.ls.apple.com,DIRECT,extended-matching
+DOMAIN-SUFFIX,cn-ssl.ls.apple.com,DIRECT,extended-matching
+DOMAIN-SUFFIX,icloud.com.cn,DIRECT,extended-matching
+# Apple Maps
+PROCESS-NAME,com.apple.geod,Apple
 DOMAIN,direction2.is.autonavi.com,DIRECT,extended-matching
-DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT,extended-matching
-DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT,extended-matching
 DOMAIN,dispatcher.is.autonavi.com,DIRECT,extended-matching
+DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT,extended-matching
+DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT,extended-matching
 DOMAIN,limit-rule.is.autonavi.com,DIRECT,extended-matching
 
+# > Apple Intelligence
+# https://support.apple.com/zh-cn/101555
+# Apple 智能扩展
+DOMAIN,apple-relay.apple.com,Apple,extended-matching
+# 私有云计算
+DOMAIN,apple-relay.cloudflare.com,Apple,extended-matching
+DOMAIN,apple-relay.fastly-edge.com,Apple,extended-matching
+DOMAIN,cp4.cloudflare.com,Apple,extended-matching
+# Siri 和听写请求
+DOMAIN,guzzoni.apple.com,Apple,extended-matching
+# Apple 定位与系统服务域名
+DOMAIN,gspe1-ssl.ls.apple.com,Apple,extended-matching
+# 搜索服务，包括 Siri、聚焦、查询、Safari 浏览器、新闻、信息和音乐
+DOMAIN-SUFFIX,smoot.apple.com,Apple,extended-matching
+# CloudKit 内容，包括 XProtect 更新和语音控制资源
+DOMAIN-SUFFIX,gateway.icloud.com,Apple,extended-matching
+
+# > Apple News
+DOMAIN,apple.comscoreresearch.com,Apple,extended-matching
+DOMAIN,news-edge.apple.com,Apple,extended-matching
+DOMAIN,news-events.apple.com,Apple,extended-matching
+DOMAIN-SUFFIX,iadsdk.apple.com,REJECT,pre-matching,extended-matching
+DOMAIN-SUFFIX,apple.news,Apple,extended-matching
+URL-REGEX,^https?:\/\/news-assets\.apple\.com\/(audio-narrative|podcast\/audio)\/.*,Apple,extended-matching
+
+# > Apple TV
+DOMAIN,uts-api.itunes.apple.com,Apple,extended-matching
+DOMAIN,tv.applemusic.com,Apple,extended-matching
+# Trailers
+DOMAIN,hls.itunes.apple.com,Apple,extended-matching
+DOMAIN,hls-amt.itunes.apple.com,Apple,extended-matching
+# Unblock Region
+DOMAIN,play-edge.itunes.apple.com,Apple,extended-matching
+DOMAIN-SUFFIX,tv.apple.com,Apple,extended-matching
+
+# > iCloud Private Relay
+# https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
+# https://mask-api.icloud.com/egress-ip-ranges.csv
+# Allow for network traffic audits
+DOMAIN,canary.mask.apple-dns.net,Apple,extended-matching
+DOMAIN,mask.apple-dns.net,Apple,extended-matching
+DOMAIN,mask.icloud.com,Apple,extended-matching
+DOMAIN,mask-canary.icloud.com,Apple,extended-matching
+DOMAIN,mask-h2.icloud.com,Apple,extended-matching
+DOMAIN,mask-t.apple-dns.net,Apple,extended-matching
+
+# > Apple Push APNs
+DOMAIN,identity.apple.com,Apple,extended-matching
+DOMAIN-SUFFIX,push.apple.com,Apple,extended-matching
+DOMAIN-KEYWORD,apple.com.edgekey.net,Apple,extended-matching
+IP-CIDR,17.57.144.0/22,Apple,no-resolve
+IP-CIDR,17.188.20.0/23,Apple,no-resolve
+IP-CIDR,17.188.128.0/18,Apple,no-resolve
+IP-CIDR,17.249.0.0/16,Apple,no-resolve
+IP-CIDR,17.252.0.0/16,Apple,no-resolve
+IP-CIDR6,2403:300:a42::/48,Apple,no-resolve
+IP-CIDR6,2403:300:a51::/48,Apple,no-resolve
+IP-CIDR6,2620:149:a44::/48,Apple,no-resolve
+IP-CIDR6,2a01:b740:a42::/48,Apple,no-resolve
+
 # > Apple API
+PROCESS-NAME,apsd,Apple
+PROCESS-NAME,com.apple.Maps,Apple
+PROCESS-NAME,CoreLocationAgent,Apple
+PROCESS-NAME,findmydevice-user-agent,Apple
+PROCESS-NAME,fmfd,Apple
+PROCESS-NAME,mapspushd,Apple
+PROCESS-NAME,netbiosd,Apple
+PROCESS-NAME,WeatherWidget,Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple,extended-matching
 DOMAIN-SUFFIX,apple.co,Apple,extended-matching
 DOMAIN-SUFFIX,apple.com,Apple,extended-matching
-DOMAIN-SUFFIX,apple.com.cn,DIRECT,extended-matching
 DOMAIN-SUFFIX,apple-cloudkit.com,Apple,extended-matching
+DOMAIN-SUFFIX,apple-dns.net,Apple,extended-matching
 DOMAIN-SUFFIX,apple-mapkit.com,Apple,extended-matching
 DOMAIN-SUFFIX,appsto.re,Apple,extended-matching
 DOMAIN-SUFFIX,appstore.com,Apple,extended-matching
 DOMAIN-SUFFIX,cdn-apple.com,Apple,extended-matching
 DOMAIN-SUFFIX,icloud.com,Apple,extended-matching
-DOMAIN-SUFFIX,icloud.com.cn,DIRECT,extended-matching
 DOMAIN-SUFFIX,icloud-content.com,Apple,extended-matching
 DOMAIN-SUFFIX,itunes.com,Apple,extended-matching
 DOMAIN-SUFFIX,me.com,Apple,extended-matching
 DOMAIN-SUFFIX,mzstatic.com,Apple,extended-matching
+DOMAIN-SUFFIX,organicfruitapps.com,Apple,extended-matching
 DOMAIN-KEYWORD,apple.com.akadns.net,Apple,extended-matching
 DOMAIN-KEYWORD,icloud.com.akadns.net,Apple,extended-matching
 IP-CIDR,17.0.0.0/8,Apple,no-resolve
@@ -39,20 +116,3 @@ IP-CIDR,144.178.48.0/20,Apple,no-resolve
 IP-CIDR,192.35.50.0/24,Apple,no-resolve
 IP-CIDR,198.183.17.0/24,Apple,no-resolve
 IP-CIDR,205.180.175.0/24,Apple,no-resolve
-
-# > Apple News
-DOMAIN-SUFFIX,apple.news,Apple,extended-matching
-DOMAIN-SUFFIX,iadsdk.apple.com,REJECT,pre-matching,extended-matching
-
-# > Apple Push
-DOMAIN,identity.apple.com,Apple,extended-matching
-DOMAIN-SUFFIX,push.apple.com,Apple,extended-matching
-IP-CIDR,17.188.128.0/18,Apple,no-resolve
-IP-CIDR,17.188.20.0/23,Apple,no-resolve
-IP-CIDR,17.249.0.0/16,Apple,no-resolve
-IP-CIDR,17.252.0.0/16,Apple,no-resolve
-IP-CIDR,17.57.144.0/22,Apple,no-resolve
-IP-CIDR,2403:300:a42::/48,Apple,no-resolve
-IP-CIDR,2403:300:a51::/48,Apple,no-resolve
-IP-CIDR,2620:149:a44::/48,Apple,no-resolve
-IP-CIDR,2a01:b740:a42::/48,Apple,no-resolve
