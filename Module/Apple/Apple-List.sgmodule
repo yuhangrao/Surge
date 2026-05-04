@@ -66,7 +66,7 @@ DOMAIN,mask-canary.icloud.com,Apple,extended-matching
 DOMAIN,mask-h2.icloud.com,Apple,extended-matching
 DOMAIN,mask-t.apple-dns.net,Apple,extended-matching
 
-# > Apple Push APNs
+# > APNs
 DOMAIN,identity.apple.com,Apple,extended-matching
 DOMAIN-SUFFIX,push.apple.com,Apple,extended-matching
 DOMAIN-KEYWORD,apple.com.edgekey.net,Apple,extended-matching
