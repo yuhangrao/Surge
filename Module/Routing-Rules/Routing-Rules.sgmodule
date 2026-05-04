@@ -32,3 +32,6 @@ DOMAIN-SUFFIX,golang.org,Proxy,extended-matching
 
 # UHD
 DOMAIN-SUFFIX,uhdnow.com,Stream,extended-matching
+
+# Doom
+DOMAIN-SUFFIX,domob.org,DIRECT,extended-matching
