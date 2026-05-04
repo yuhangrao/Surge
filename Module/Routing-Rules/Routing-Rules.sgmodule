@@ -1,5 +1,5 @@
-#!name=Ruleset
-#!desc=Personal ruleset
+#!name=Traffic Routing Rules
+#!desc=Personal routing rules
 #!category=Enhancement
 
 [Rule]
@@ -24,3 +24,11 @@ IP-CIDR6,2409:8c54:871::/48,DIRECT,no-resolve
 
 # Domain of IP info in Surge panel
 DOMAIN,api.my-ip.io,DIRECT,extended-matching
+
+# Golang (单独设置 避免匹配到 Google)
+DOMAIN-SUFFIX,golang.com,Proxy,extended-matching
+DOMAIN-SUFFIX,golang.net,Proxy,extended-matching
+DOMAIN-SUFFIX,golang.org,Proxy,extended-matching
+
+# UHD
+DOMAIN-SUFFIX,uhdnow.com,Stream,extended-matching
