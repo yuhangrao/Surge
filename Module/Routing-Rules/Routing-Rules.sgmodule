@@ -35,3 +35,6 @@ DOMAIN-SUFFIX,uhdnow.com,Stream,extended-matching
 
 # Doom
 DOMAIN-SUFFIX,domob.org,DIRECT,extended-matching
+
+# Mine
+DOMAIN-SUFFIX,yuhangrao.com,DIRECT,extended-matching
